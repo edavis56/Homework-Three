@@ -17,12 +17,12 @@ var num = '123456789';
 var symbol = '!@#$%^&*()_-';
 
 genButton.addEventListener("click",function(e){
-    var character = char;
-    (lowercase.checked) ? characters += lower : '';
-    (uppercase.checked) ? characters += upper : '';
-    (numeric.checked) ? characters += num : '';
-    (special.checked) ? characters += symbol : '';
-    thePwd.value = password(length.value, character);
+    var character = lower;
+    (lowercase.checked) ? character += lower : '';
+    (uppercase.checked) ? character += upper : '';
+    (numeric.checked) ? character += num : '';
+    (special.checked) ? character += symbol : '';
+    thePwd.value = password(characterLength.value, character);
 });
 
 function password(l,character){
